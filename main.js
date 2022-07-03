@@ -18,13 +18,31 @@ quoteArray.push(quote1.quote);
 let quote2 = newQuote("When I grow up, I'm going to Bovine University!", "Ralph Wiggum Lisa the Vegetarian (S07E05");
 quoteArray.push(quote2.quote);
 
+let quote3 = newQuote("It takes two to lie; one to lie, and one to listen.", "Homer, Colonel Homer (S03E20");
+quoteArray.push(quote3.quote);
+
 
 //function to generate random quote
 
-const getRandomQuote = () => {
-    let randNum = Math.floor(Math.random()*2);
+function getRandomQuote() {
+    let randNum = Math.floor(Math.random()*3);
     let randQuote = quoteArray[randNum];
-    return randQuote
-}
+    return randQuote;
+};
 
 console.log(getRandomQuote());
+
+
+let simpsonQuote = document.getElementById("quote-quote");
+let quoteInfo = document.getElementById("quote-citation");
+
+function updateQuote() {
+    simpsonQuote.innerHTML = getRandomQuote();
+    quoteInfo.innerHTML = 'citation info';
+}
+
+let quoteButton = document.getElementById("quote-button");
+
+//quoteButton.addEventListener('click', updateQuote);
+quoteButton.onclick = updateQuote;
+
