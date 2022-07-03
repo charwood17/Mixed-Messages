@@ -4,6 +4,7 @@ body{
 }
 
 h1{
+    text-align: center;
     color: blue;
     font-family: "Chalkduster";
 }
@@ -13,4 +14,12 @@ button{
     color: blue;
     border-color: yellow;
     border-radius: 10% 10% 10% 10%;
+    display: flex;
+    margin: auto;
+}
+
+#quote{
+    text-align: left;
+    display: flex;
+    margin: auto;
 }
