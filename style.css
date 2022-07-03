@@ -1,7 +1,16 @@
 body{
-    background-image: url(./cloud-background.jpg)
+    background-image: url(./cloud-background.jpg);
+    font-family: "Trebuchet MS", sans-serif;
 }
 
 h1{
     color: blue;
+    font-family: "Chalkduster";
+}
+
+button{
+    background-color: yellow;
+    color: blue;
+    border-color: yellow;
+    border-radius: 10% 10% 10% 10%;
 }
