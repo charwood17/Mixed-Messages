@@ -3,24 +3,24 @@
 const quoteArray = [];
 
 //factory function to create objects of quotes & citations
-function newQuote(quote, citation) {
+function newQuote(quote, character, episode) {
     return {
         quote: quote,
-        citation: citation
+        character: character,
+        episode: episode
     }
 };
 
 //create objects of quotes & citations, put quotes in array
 let quote1 = newQuote("This town is a part of us all... a part of us all... a part of us all", 
-"Marge, Lemon of Troy (S06E24)");
+"Marge", "Lemon of Troy (S06E24)");
 quoteArray.push(quote1);
 
-let quote2 = newQuote("When I grow up, I'm going to Bovine University!", "Ralph Wiggum, Lisa the Vegetarian (S07E05)");
+let quote2 = newQuote("When I grow up, I'm going to Bovine University!", "Ralph Wiggum", "Lisa the Vegetarian (S07E05)");
 quoteArray.push(quote2);
 
-let quote3 = newQuote("It takes two to lie; one to lie, and one to listen.", "Homer, Colonel Homer (S03E20)");
+let quote3 = newQuote("It takes two to lie; one to lie, and one to listen.", "Homer", "Colonel Homer (S03E20)");
 quoteArray.push(quote3);
-
 
 
 let randNum = Math.floor(Math.random()*quoteArray.length);
@@ -30,22 +30,30 @@ function getQuote() {
     return randQuote;
 }
 
-function getCitation() {
-    let randCitation = quoteArray[randNum].citation;
-    return randCitation;
+function getCharacter() {
+    let randChar = quoteArray[randNum].character;
+    return randChar;
+}
+
+function getEpisode() {
+    let randEp = quoteArray[randNum].episode;
+    return randEp;
 }
 
 console.log(getQuote());
-console.log(getCitation());
+console.log(getCharacter());
+console.log(getEpisode());
 
 
 let simpsonQuote = document.getElementById("quote-quote");
-let quoteInfo = document.getElementById("quote-citation");
+let quoteChar = document.getElementById("quote-character");
+let quoteEpisode = document.getElementById("quote-episode");
 
 function updateQuote() {
     randNum = Math.floor(Math.random()*quoteArray.length);
     simpsonQuote.innerHTML = getQuote();
-    quoteInfo.innerHTML = getCitation();
+    quoteChar.innerHTML = getCharacter();
+    quoteEpisode.innerHTML = getEpisode();
 }
 
 let quoteButton = document.getElementById("quote-button");
