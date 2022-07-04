@@ -1,6 +1,8 @@
-#Random Simpsons Quote Generator
+Random Simpsons Quote Generator
+============
 
-##To Use:
+To Use:
+-----
 Download all files to your computer, then open index.html in any web browser
 
 Click the generate quote button to see a random Simpsons quote and related image!
