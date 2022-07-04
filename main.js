@@ -31,7 +31,7 @@ let quote5 = newQuote("There's only one thing to do at a moment like this: strut
 "Bart Simpson", "Bart's Girlfriend (S06E07)", "./images/strut.png")
 quoteArray.push(quote5);
 
-let quoteTab = newQuote("To Start Press Any Key.  Where's the ANY key? I see Esk, Catarl, and Pig-Up.  There doesn't seem to be any ANY key.  Woo!  All this computer hacking is making me thirsty.  I think I'll order a TAB.", 
+let quoteTab = newQuote("To Start Press Any Key.  Where's the Any key? I see Esk, Catarl, and Pig-Up.  There doesn't seem to be any Any key.  Woo!  All this computer hacking is making me thirsty.  I think I'll order a Tab.", 
 "Homer Simpson", "King Size Homer (S07E07)", "./images/any-key.jpg")
 
 let randNum = Math.floor(Math.random()*quoteArray.length);
