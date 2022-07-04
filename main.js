@@ -3,25 +3,27 @@
 const quoteArray = [];
 
 //factory function to create objects of quotes & citations
-function newQuote(quote, character, episode) {
+function newQuote(quote, character, episode, pic) {
     return {
         quote: quote,
         character: character,
-        episode: episode
+        episode: episode,
+        pic: pic
     }
 };
 
 //create objects of quotes & citations, put quotes in array
 let quote1 = newQuote("This town is a part of us all. A part of us all. A part of us all. Sorry to repeat myself, but it will help you remember", 
-"Marge Simpson", "Lemon of Troy (S06E24)");
+"Marge Simpson", "Lemon of Troy (S06E24)", "./images/part-of-us-all.jpg");
 quoteArray.push(quote1);
 
-let quote2 = newQuote("When I grow up, I'm going to Bovine University!", "Ralph Wiggum", "Lisa the Vegetarian (S07E05)");
+let quote2 = newQuote("When I grow up, I'm going to Bovine University!", "Ralph Wiggum", "Lisa the Vegetarian (S07E05)", "bovine-university.jpg");
 quoteArray.push(quote2);
 
-let quote3 = newQuote("It takes two to lie; one to lie, and one to listen.", "Homer Simpson", "Colonel Homer (S03E20)");
+let quote3 = newQuote("It takes two to lie; one to lie, and one to listen.", "Homer Simpson", "Colonel Homer (S03E20)", "two-to-lie");
 quoteArray.push(quote3);
 
+console.log(quoteArray);
 
 let randNum = Math.floor(Math.random()*quoteArray.length);
 
@@ -40,9 +42,15 @@ function getEpisode() {
     return randEp;
 }
 
+function getImage() {
+    let randImage = quoteArray[randNum].pic;
+    return randImage;
+}
+
 console.log(getQuote());
 console.log(getCharacter());
 console.log(getEpisode());
+console.log(getImage());
 
 
 let simpsonQuote = document.getElementById("quote-quote");
@@ -55,7 +63,7 @@ function updateQuote() {
     simpsonQuote.innerHTML = getQuote();
     quoteChar.innerHTML = getCharacter();
     quoteEpisode.innerHTML = getEpisode();
-    episodeImage.src = "./images/bovine-university.jpg"
+    episodeImage.src = getImage();
 }
 
 let quoteButton = document.getElementById("quote-button");
