@@ -17,10 +17,10 @@ let quote1 = newQuote("This town is a part of us all. A part of us all. A part o
 "Marge Simpson", "Lemon of Troy (S06E24)", "./images/part-of-us-all.jpg");
 quoteArray.push(quote1);
 
-let quote2 = newQuote("When I grow up, I'm going to Bovine University!", "Ralph Wiggum", "Lisa the Vegetarian (S07E05)", "bovine-university.jpg");
+let quote2 = newQuote("When I grow up, I'm going to Bovine University!", "Ralph Wiggum", "Lisa the Vegetarian (S07E05)", "./images/bovine-university.jpg");
 quoteArray.push(quote2);
 
-let quote3 = newQuote("It takes two to lie; one to lie, and one to listen.", "Homer Simpson", "Colonel Homer (S03E20)", "two-to-lie");
+let quote3 = newQuote("It takes two to lie; one to lie, and one to listen.", "Homer Simpson", "Colonel Homer (S03E20)", "./images/two-to-lie.jpg");
 quoteArray.push(quote3);
 
 console.log(quoteArray);
