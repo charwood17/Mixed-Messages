@@ -1,5 +1,5 @@
 body{
-    background-image: url(./cloud-background.jpg);
+    background-image: url(./images/cloud-background.jpg);
     font-family: "Trebuchet MS", sans-serif;
 }
 
@@ -22,4 +22,11 @@ button{
     text-align: left;
     display: flex;
     margin: auto;
+}
+
+#image{
+    display: flex;
+    margin: auto;
+    width: 250px;
+    height: 250px;
 }
