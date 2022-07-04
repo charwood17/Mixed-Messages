@@ -65,6 +65,7 @@ let simpsonQuote = document.getElementById("quote-quote");
 let quoteChar = document.getElementById("quote-character");
 let quoteEpisode = document.getElementById("quote-episode");
 let episodeImage = document.getElementById("quote-picture");
+let familyPicture = document.getElementById("family-picture")
 
 function updateQuote() {
     randNum = Math.floor(Math.random()*quoteArray.length);
@@ -72,6 +73,7 @@ function updateQuote() {
     quoteChar.innerHTML = getCharacter();
     quoteEpisode.innerHTML = getEpisode();
     episodeImage.src = getImage();
+    familyPicture.style.display = "none";
 }
 
 let quoteButton = document.getElementById("quote-button");
