@@ -1,4 +1,5 @@
 // code to generate random Simpsons quote on button click
+
 //blank array that will store quotes for random generation
 const quoteArray = [];
 
@@ -34,8 +35,10 @@ quoteArray.push(quote5);
 let quoteTab = newQuote("To Start Press Any Key.  Where's the Any key? I see Esk, Catarl, and Pig-Up.  There doesn't seem to be any Any key.  Woo!  All this computer hacking is making me thirsty.  I think I'll order a Tab.", 
 "Homer Simpson", "King Size Homer (S07E07)", "./images/any-key.jpg")
 
+//placeholder random number
 let randNum = Math.floor(Math.random()*quoteArray.length);
 
+//below functions to get correct piece of each object according tox  random number
 function getQuote() {
     let randQuote = quoteArray[randNum].quote;
     return randQuote;
@@ -56,18 +59,20 @@ function getImage() {
     return randImage;
 }
 
+//below console log commands for testing
 console.log(getQuote());
 console.log(getCharacter());
 console.log(getEpisode());
 console.log(getImage());
 
-
+//set variables for HTML elements
 let simpsonQuote = document.getElementById("quote-quote");
 let quoteChar = document.getElementById("quote-character");
 let quoteEpisode = document.getElementById("quote-episode");
 let episodeImage = document.getElementById("quote-picture");
 let familyPicture = document.getElementById("family-picture")
 
+//function to update HTML elements with randomly selected quote
 function updateQuote() {
     randNum = Math.floor(Math.random()*quoteArray.length);
     simpsonQuote.innerHTML = getQuote();
@@ -77,6 +82,7 @@ function updateQuote() {
     familyPicture.style.display = "none";
 }
 
+//function to show easter egg "any key" quote when user presses tab
 function anyKeyQuote(e) {
     if (e.keyCode === 9) {
     simpsonQuote.innerHTML = quoteTab.quote;
@@ -87,9 +93,8 @@ function anyKeyQuote(e) {
     }
 }
 
+//event handler functions
 let quoteButton = document.getElementById("quote-button");
-
-//quoteButton.addEventListener('click', updateQuote);
 quoteButton.onclick = updateQuote;
 
 document.addEventListener('keydown', anyKeyQuote);
