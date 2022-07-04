@@ -23,6 +23,14 @@ quoteArray.push(quote2);
 let quote3 = newQuote("It takes two to lie; one to lie, and one to listen.", "Homer Simpson", "Colonel Homer (S03E20)", "./images/two-to-lie.jpg");
 quoteArray.push(quote3);
 
+let quote4 = newQuote("You mean those leagues where parents push their kids into vicious competition to compensate for their own failed dreams of glory?", 
+"Lisa Simpson", "Lisa On Ice (S06E08)", "./images/dreams-of-glory.webp")
+quoteArray.push(quote4);
+
+let quote5 = newQuote("There's only one thing to do at a moment like this: strut!", 
+"Bart Simpson", "Bart's Girlfriend (S06E07)", "./images/strut.png")
+quoteArray.push(quote5);
+
 console.log(quoteArray);
 
 let randNum = Math.floor(Math.random()*quoteArray.length);
